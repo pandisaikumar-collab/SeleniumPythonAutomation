@@ -1,1 +1,1 @@
-# SeleniumPythonAutomation
+# MyAutomation
