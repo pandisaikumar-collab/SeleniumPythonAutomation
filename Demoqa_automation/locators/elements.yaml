@@ -2,6 +2,8 @@ elements_groups:
   xpath: "//div[@class='left-pannel']//div[@class='element-group']"
   text_box:
     xpath: "//ul[@class='menu-list']/li/span[contains(text(), 'Text Box')]"
+  web_tables:
+    xpath: "//ul[@class='menu-list']/li/span[contains(text(), 'Web Tables')]"
 elements_wrapper:
   xpath: "//div[@class='element-group']//*[text()='Elements']"
 froms_wrapper:
@@ -12,3 +14,18 @@ widgets_wrapper:
   xpath: "//div[@class='element-group']//*[text()='Widgets']"
 book_store_wrapper:
   xpath: "//div[@class='element-group']//*[text()='Book Store Application']"
+
+# Web Table
+web_table:
+  firstname: 
+    xpath: "//div[@class='rt-table']//div[@class='rt-tbody']//div[@role='gridcell'][1]"
+  lastname:
+    xpath: "//div[@class='rt-table']//div[@class='rt-tbody']//div[@role='gridcell'][2]"
+  age:
+    xpath: "//div[@class='rt-table']//div[@class='rt-tbody']//div[@role='gridcell'][3]"
+  email:
+    xpath: "//div[@class='rt-table']//div[@class='rt-tbody']//div[@role='gridcell'][4]"
+  salary:
+    xpath: "//div[@class='rt-table']//div[@class='rt-tbody']//div[@role='gridcell'][5]"
+  department:
+    xpath: "//div[@class='rt-table']//div[@class='rt-tbody']//div[@role='gridcell'][6]"

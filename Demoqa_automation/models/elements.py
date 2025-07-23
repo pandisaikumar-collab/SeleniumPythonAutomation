@@ -117,5 +117,54 @@ class Elements:
         Clicks on the Text Box button
         """
         return self.click_button(xpath=self.xpaths["elements_groups"]["text_box"]["xpath"])
-    
-    
+
+    def click_webtable_button(self):
+        """
+        Clicks on the Web Table button
+        """
+        return self.click_button(xpath=self.xpaths["elements_groups"]["web_tables"]["xpath"])
+
+    def get_web_table_data(self):
+        """
+        Return Table data 
+        :returns: Dict data
+        :rtype: dict 
+        """
+        table_info = {}
+
+        first_name_eles = self.driver.find_elements(By.XPATH, self.xpaths["web_table"]["firstname"]["xpath"])
+        last_name_eles = self.driver.find_elements(By.XPATH, self.xpaths["web_table"]["lastname"]["xpath"])
+        age_eles = self.driver.find_elements(By.XPATH, self.xpaths["web_table"]["age"]["xpath"])
+        email_eles = self.driver.find_elements(By.XPATH, self.xpaths["web_table"]["email"]["xpath"])
+        salary_eles = self.driver.find_elements(By.XPATH, self.xpaths["web_table"]["salary"]["xpath"])
+        department_eles = self.driver.find_elements(By.XPATH, self.xpaths["web_table"]["department"]["xpath"])
+        if not first_name_eles:
+            log.info("No data found in the table")
+            return table_info
+
+        for index, first_name_ele in enumerate(first_name_eles):
+            last_name_ele = last_name_eles[index]
+            age_ele = age_eles[index]
+            email_ele = email_eles[index]
+            salary_ele = salary_eles[index]
+            department_ele = department_eles[index]
+
+            first_name = first_name_ele.text.strip()
+            last_name = last_name_ele.text.strip()
+            age = age_ele.text.strip()
+            email = email_ele.text.strip()
+            salary = salary_ele.text.strip()
+            department = department_ele.text.strip()
+
+            table_data = {
+                "Firstname": first_name,
+                "Lastname": last_name,
+                "Age": age,
+                "Email": email,
+                "Salary": salary,
+                "Department": department
+            }
+
+            table_info[first_name] = table_data
+
+        return table_info

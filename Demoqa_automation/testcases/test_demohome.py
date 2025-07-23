@@ -46,8 +46,11 @@ def test_demo_home_page(driver):
         if elements_obj.is_elements_page_loaded():
             assert True, "Elements page loaded successfully"
             #elements_obj.click_elements_button()
-            elements_obj.click_text_box_button()
-            time.sleep(5)
-
+            elements_obj.click_webtable_button()
+            table_data = elements_obj.get_web_table_data()
+            if table_data:
+                log.info(f"Table data: %s", table_data)
+            else:
+                pytest.fail("No data found in the web table")
     else:
         pytest.fail("Failed to load Demo Home page")
