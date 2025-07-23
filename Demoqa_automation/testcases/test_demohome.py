@@ -1,6 +1,6 @@
 import pytest 
 import yaml 
-import selenium import webdriver 
+from selenium import webdriver
 
 @pytest.fixture(scop='session')
 def config():
@@ -20,5 +20,3 @@ def driver(config):
     driver.get(config['base_url'])
     yield driver
     driver.quit()
-
-
