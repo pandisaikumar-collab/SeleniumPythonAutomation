@@ -2,3 +2,10 @@ paramiko
 selenium
 pytest
 pyyaml
+paramiko
+selenium
+pytest
+pyyaml
+pytest-html
+
+

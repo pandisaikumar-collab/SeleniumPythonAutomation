@@ -1,9 +1,20 @@
-import pytest
-import yaml
 import os
-import time 
+import yaml
+import time
+import pytest 
+import logging 
 from selenium import webdriver
 from models.demohome import DemoHome
+from models.elements import Elements
+
+log = logging.getLogger(os.path.basename(__file__))
+log.setLevel(logging.INFO)
+
+if not log.hasHandlers():
+    handler = logging.StreamHandler()
+    formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+    handler.setFormatter(formatter)
+    log.addHandler(handler)
 
 @pytest.fixture(scope='session')
 def config():
@@ -21,13 +32,22 @@ def driver(config):
         raise Exception("Unsupported browser in config.")
 
     driver.get(config['base_url'])
-    print("Wating 30 for website stable")
-    time.sleep(30)
+    driver.maximize_window()
+    time.sleep(5)
+    log.info("Waiting 10 seconds for website to stabilize")
     yield driver
     driver.quit()
 
-
 def test_demo_home_page(driver):
     home_obj = DemoHome(driver)
-    assert home_obj.is_demoqa_page_loaded()
-    
+    elements_obj = Elements(driver)
+    if home_obj.is_demoqa_page_loaded():
+        home_obj.click_elements_button()
+        if elements_obj.is_elements_page_loaded():
+            assert True, "Elements page loaded successfully"
+            #elements_obj.click_elements_button()
+            elements_obj.click_text_box_button()
+            time.sleep(5)
+
+    else:
+        pytest.fail("Failed to load Demo Home page")

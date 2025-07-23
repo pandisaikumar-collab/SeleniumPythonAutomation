@@ -1,0 +1,14 @@
+elements_groups:
+  xpath: "//div[@class='left-pannel']//div[@class='element-group']"
+  text_box:
+    xpath: "//ul[@class='menu-list']/li/span[contains(text(), 'Text Box')]"
+elements_wrapper:
+  xpath: "//div[@class='element-group']//*[text()='Elements']"
+froms_wrapper:
+  xpath: "//div[@class='element-group']//*[text()='Forms']"
+alerts_frames_windows_wrapper:
+  xpath: "//div[@class='element-group']//*[text()='Alerts, Frame & Windows']"
+widgets_wrapper:
+  xpath: "//div[@class='element-group']//*[text()='Widgets']"
+book_store_wrapper:
+  xpath: "//div[@class='element-group']//*[text()='Book Store Application']"
