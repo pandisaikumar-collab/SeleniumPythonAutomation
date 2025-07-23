@@ -1,12 +1,15 @@
-import pytest 
-import yaml 
+import pytest
+import yaml
+import os
+import time 
 from selenium import webdriver
+from models.demohome import DemoHome
 
-@pytest.fixture(scop='session')
+@pytest.fixture(scope='session')
 def config():
-    with open("") as file:
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'config', 'config.yaml')
+    with open(config_path) as file:
         return yaml.safe_load(file)
-
 
 @pytest.fixture()
 def driver(config):
@@ -18,5 +21,11 @@ def driver(config):
         raise Exception("Unsupported browser in config.")
 
     driver.get(config['base_url'])
+    time.sleep(5)  # shorter delay
     yield driver
     driver.quit()
+
+
+def test_demo_home_page(driver):
+    home = DemoHome(driver)
+    assert home is not None  # Add your actual assertion here

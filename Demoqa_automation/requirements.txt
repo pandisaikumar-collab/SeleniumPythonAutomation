@@ -1,4 +1,4 @@
-paramiko 
-selenium 
-pytest 
+paramiko
+selenium
+pytest
 pyyaml

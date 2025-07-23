@@ -1,0 +1,4 @@
+demo_header: 
+  xpath: "//div[@id='app']//a[contains(@href, 'selenium-training')]/img"
+demo_all_elements:
+  xpath: "//div[contains(@class, 'home-body')]//div[contains(@class, 'cards')]//div[contains(@class, 'card-body')]/h5"

@@ -37,10 +37,10 @@ class DemoHome:
         """
         self.driver = driver 
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        locator_path = os.path.join(current_dir, "..", "locators", "demohome.yaml")
+        locator_path = current_dir + "/../locators/demohome.yaml"
 
         with open(locator_path, 'r') as f:
-            self.locators = yaml.safe_load(f)
+            self.xpaths = yaml.safe_load(f)
     
     def is_demoqa_page_loaded(self):
         """
@@ -56,7 +56,7 @@ class DemoHome:
         try:
             WebDriverWait(self.driver, DEFAULT_WAITIME).until(
                 EC.visibility_of_element_located((
-                    By.XPATH, self.locators["demoheader"]["xpath"])))
+                    By.XPATH, self.xpaths["demo_header"]["xpath"])))
             
         except TimeoutException: 
             is_demo_page_loaded = False 
@@ -65,7 +65,7 @@ class DemoHome:
         try:
             WebDriverWait(self.driver, DEFAULT_WAITIME).until(
                 EC.visibility_of_all_elements_located((
-                    By.XPATH, self.locators["all_demo_elements"]["xpath"]
+                    By.XPATH, self.xpaths["demo_all_elements"]["xpath"]
                 )))
             
         except TimeoutException: 

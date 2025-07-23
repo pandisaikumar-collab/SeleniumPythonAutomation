@@ -1,2 +1,2 @@
-website: "https://demoqa.com/"
+base_url: "https://demoqa.com/"
 browser: "chrome"
