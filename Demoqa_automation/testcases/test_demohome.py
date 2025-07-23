@@ -21,11 +21,12 @@ def driver(config):
         raise Exception("Unsupported browser in config.")
 
     driver.get(config['base_url'])
-    time.sleep(5)  # shorter delay
+    print("Wating 30 for website stable")
+    time.sleep(30)
     yield driver
     driver.quit()
 
 
 def test_demo_home_page(driver):
     home = DemoHome(driver)
-    assert home is not None  # Add your actual assertion here
+    assert home is not None
