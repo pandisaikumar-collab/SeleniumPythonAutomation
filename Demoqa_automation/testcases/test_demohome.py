@@ -28,5 +28,6 @@ def driver(config):
 
 
 def test_demo_home_page(driver):
-    home = DemoHome(driver)
-    assert home is not None
+    home_obj = DemoHome(driver)
+    assert home_obj.is_demoqa_page_loaded()
+    
