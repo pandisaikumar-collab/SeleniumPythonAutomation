@@ -1,2 +1,10 @@
 base_url: "https://demoqa.com/"
 browser: "chrome"
+
+registration_form:
+  firstname: "Saikumar"
+  lastname: "Pandi"
+  email: "pandisaikumar.tech@gmail.com"
+  age: 25
+  salary: 00000
+  department: "Engineering"

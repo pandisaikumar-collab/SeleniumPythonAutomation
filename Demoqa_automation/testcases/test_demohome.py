@@ -38,19 +38,31 @@ def driver(config):
     yield driver
     driver.quit()
 
-def test_demo_home_page(driver):
+def test_demo_home_page(driver, config):
     home_obj = DemoHome(driver)
     elements_obj = Elements(driver)
     if home_obj.is_demoqa_page_loaded():
         home_obj.click_elements_button()
         if elements_obj.is_elements_page_loaded():
             assert True, "Elements page loaded successfully"
-            #elements_obj.click_elements_button()
             elements_obj.click_webtable_button()
             table_data = elements_obj.get_web_table_data()
             if table_data:
                 log.info(f"Table data: %s", table_data)
             else:
                 pytest.fail("No data found in the web table")
+            
+            payload = dict()
+            payload['firstname'] = config['registration_form']['firstname']
+            payload['lastname'] = config['registration_form']['lastname']
+            payload['email'] = config['registration_form']['email']
+            payload['age'] = config['registration_form']['age']
+            payload['salary'] = config['registration_form']['salary']
+            payload['department'] = config['registration_form']['department']
+
+            if not payload:
+                pytest.fail("No registration payload found in config file")
+            else:
+                elements_obj.fill_registration_form(payload)
     else:
         pytest.fail("Failed to load Demo Home page")

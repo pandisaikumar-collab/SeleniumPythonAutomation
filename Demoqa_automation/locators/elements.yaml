@@ -4,6 +4,26 @@ elements_groups:
     xpath: "//ul[@class='menu-list']/li/span[contains(text(), 'Text Box')]"
   web_tables:
     xpath: "//ul[@class='menu-list']/li/span[contains(text(), 'Web Tables')]"
+  add_button:
+    xpath: "//h1[text()='Web Tables']//following::button[contains(@id, 'addNewRecordButton')]"
+  registration_form:
+    all_reg_form_fields:
+      xpath: "//div[@class='modal-content']//div[text()='Registration Form']//following::input[@type='text']"
+    firstname:
+      xpath: "//div[@class='modal-content']//div[text()='Registration Form']//following::input[@id='firstName']"
+    lastname:
+      xpath: "//div[@class='modal-content']//div[text()='Registration Form']//following::input[@id='lastName']"
+    email:
+      xpath: "//div[@class='modal-content']//div[text()='Registration Form']//following::input[@id='userEmail']"
+    age:
+      xpath: "//div[@class='modal-content']//div[text()='Registration Form']//following::input[@id='age']"
+    salary:
+      xpath: "//div[@class='modal-content']//div[text()='Registration Form']//following::input[@id='salary']"
+    department:
+      xpath: "//div[@class='modal-content']//div[text()='Registration Form']//following::input[@id='department']"
+    submit_button:
+      xpath: "//div[@class='modal-content']//div[text()='Registration Form']//following::button[@id='submit']"
+      
 elements_wrapper:
   xpath: "//div[@class='element-group']//*[text()='Elements']"
 froms_wrapper:
