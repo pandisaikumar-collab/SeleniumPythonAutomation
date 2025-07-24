@@ -168,3 +168,177 @@ class Elements:
             table_info[first_name] = table_data
 
         return table_info
+
+    def click_add_button(self):
+        """
+        Function to click on Add button
+        """
+        return self.click_button(xpath=self.xpaths['elements_groups']['add_button']['xpath'])
+
+    def is_registration_form_loaded(self):
+        """
+        Returns True if registration form loaded
+        False otherwise 
+        :returns: bool
+        """
+        page = 'Registration form'
+        timeout = DEFAULT_WAITIME
+        is_registration_form_loaded = True 
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.visibility_of_all_elements_located((
+                    By.XPATH, self.xpaths["elements_groups"]["registration_form"]["all_reg_form_fields"]['xpath'])))
+        
+        except (NoSuchElementException, TimeoutException) as e:
+            is_registration_form_loaded = False
+            log.error(f"{page} is not loaded within {timeout} seconds: {e}")
+
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.element_to_be_clickable((
+                    By.XPATH, self.xpaths["elements_groups"]["registration_form"]["all_reg_form_fields"]['xpath'])))
+        
+        except (NoSuchElementException, TimeoutException) as e:
+            is_registration_form_loaded = False
+            log.error(f"{page} is not loaded within {timeout} seconds: {e}")
+
+
+    def enter_text(self, xpath, value):
+        """
+        Clear the textbox contents if any and 
+        then enter the new value
+
+        :param xpath: filed xpath
+        :type xpath: str
+        :param value: Value to be entered in the textbox
+        :type value: str 
+        """
+        text_ele = self.driver.find_element(By.XPATH, xpath)
+
+        """
+        Using javascript method to scroll to element before entering the text 
+        in the textbox or textarea. This is implemented due to known bug with firefox 
+        browser.
+        https://stackoverflow.com/questions/44777053/selenium-movetargetoutofboundsexception-with-firefox/52045231
+        """
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", text_ele)
+        time.sleep(0.5)
+        text_ele.click()
+        time.sleep(0.5)
+        text_ele.clear()
+        time.sleep(0.5)
+        text_ele.send_keys(Keys.CONTROL + 'a' + Keys.DELETE)
+        time.sleep(0.5)
+        text_ele.clear()
+        time.sleep(0.5)
+        text_ele.send_keys(value)
+        time.sleep(0.5)
+        text_ele.send_keys(Keys.TAB)
+        time.sleep(0.5)
+        text_ele = self.driver.find_element(By.XPATH, xpath)
+        entered_value = text_ele.get_attribute('value')
+        log.info(f"Entered value: {entered_value} in the field")
+
+    def enter_first_name(self, firstname):
+        """
+        Enter First name 
+        :param first_name: name
+        :type first_name: str
+        """
+        log.info("Entering first name")
+        return self.enter_text(xpath=self.xpaths['elements_groups']['registration_form']['firstname']['xpath'], value=firstname)
+
+    def enter_last_name(self, lastname):
+        """
+        Enter Last name 
+        :param last_name: name
+        :type last_name: str
+        """
+        log.info("Entering last name")
+        return self.enter_text(xpath=self.xpaths['elements_groups']['registration_form']['lastname']['xpath'], value=lastname)
+
+    def enter_email(self, email):
+        """
+        Enter email
+        :param email: email
+        :type email: str
+        """
+        log.info("Entering email")
+        return self.enter_text(xpath=self.xpaths['elements_groups']['registration_form']['email']['xpath'], value=email)
+
+    def enter_age(self, age):
+        """
+        Enter age
+        :param age: age
+        :type age: str
+        """
+        log.info("Entering age")
+        return self.enter_text(xpath=self.xpaths['elements_groups']['registration_form']['age']['xpath'], value=age)
+
+    def enter_salary(self, salary):
+        """
+        Enter salary
+        :param salary: salary
+        :type salary: str
+        """
+        log.info("Entering salary")
+        return self.enter_text(xpath=self.xpaths['elements_groups']['registration_form']['salary']['xpath'], value=salary)
+
+    def enter_department(self, department):
+        """
+        Enter department
+        :param department: department
+        :type department: str
+        """
+        log.info("Entering department")
+        return self.enter_text(xpath=self.xpaths['elements_groups']['registration_form']['department']['xpath'], value=department)
+
+    def click_submit_button(self):
+        """
+        Click on the submit button
+        """
+        return self.click_button(xpath=self.xpaths['elements_groups']['registration_form']['submit_button']['xpath'])
+
+    def enter_registration_form_details(self, api_payload):
+        """
+        Function to fill the registration form
+
+        :param_api_payload: API payload with user data
+        :type api_payload: dict
+        : 
+        """
+        self.click_add_button()
+        self.is_registration_form_loaded()
+        if not api_payload:
+            raise ValueError("API payload is empty. Cannot fill registration form")
+        if 'firstname' in api_payload:
+            self.enter_first_name(api_payload['firstname'])
+        if 'lastname' in api_payload:
+            self.enter_last_name(api_payload['lastname'])
+        if 'email' in api_payload:
+            self.enter_email(api_payload['email'])
+        if 'age' in api_payload:
+            self.enter_age(api_payload['age'])  
+        if 'salary' in api_payload: 
+            self.enter_salary(api_payload['salary'])
+        if 'department' in api_payload:
+            self.enter_department(api_payload['department'])
+        
+        return True 
+    
+    def fill_registration_form(self, api_payload):
+        """
+        Function to fill the registration form with user data
+        :param api_payload: API payload with user data
+        :type api_payload: dict
+        """
+        log.info("Filling registration form with user data")
+        validation_msg = self.enter_registration_form_details(api_payload)
+        if validation_msg:
+            log.info("Registration form filled successfully")
+        else:
+            raise Exception("Failed to fill registration form")
+
+        
+
+
