@@ -339,6 +339,24 @@ class Elements:
         else:
             raise Exception("Failed to fill registration form")
 
+
+class Buttons(object):
+    """
+    Page model to cover Buttons section
+    :param driver: selenium driver
+    :type driver: object
+    """
+    def __init__(self, driver):
+        """
+        Constructor for Buttons page
+        """
+        self.driver = driver
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        self.locators = current_dir + "/../locators/elements.yaml"
+        with open(self.locators, 'r') as file:
+            self.xpaths = yaml.safe_load(file)
+    
+    
         
 
 

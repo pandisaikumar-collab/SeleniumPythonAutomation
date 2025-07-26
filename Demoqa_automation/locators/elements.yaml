@@ -49,3 +49,20 @@ web_table:
     xpath: "//div[@class='rt-table']//div[@class='rt-tbody']//div[@role='gridcell'][5]"
   department:
     xpath: "//div[@class='rt-table']//div[@class='rt-tbody']//div[@role='gridcell'][6]"
+
+buttons_section:
+  all_buttons:
+    xpath: "//h1[text()='Buttons']//following::button"
+  double_click_button:
+    xpath: "//h1[text()='Buttons']//following::button[text()='Double Click Me']"
+  right_click_button:
+    xpath: "//h1[text()='Buttons']//following::button[text()='Right Click Me']"
+  click_me_button:
+    xpath: "//h1[text()='Buttons']//following::button[text()='Click Me']"
+  double_click_msg:
+    xpath: "//h1[text()='Buttons']//following::p[contains(@id, 'doubleClickMessage')]"
+  single_click_msg:
+    xpath: "//h1[text()='Buttons']//following::p[contains(@id, 'rightClickMessage')]"
+  click_me_msg:
+    xpath: "//h1[text()='Buttons']//following::p[contains(@id, 'dynamicClickMessage')]"
+    
