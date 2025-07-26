@@ -1,0 +1,63 @@
+"""
+REST API with Python
+"""
+*What is REST API:
+    A REST API (Representational State Transfer) allows interaction with web services 
+    using HTTP methods like GET, POST, PUT, DELETE.
+
+*What module is used for REST API in Python:
+   requests
+   pip install requests
+
+*What are the methods available in requests:
+    GET/POST/PUT/DELETE
+
+*What is header and response:
+    Header: Contains metadata like content-type, auth tokens.
+    Response: The returned data from the server after an API call.
+
+*What is content-type? Give examples:
+    It tells the server the format of the data being sent.
+    application/json
+    application/x-www-form-urlencoded
+    text/plain
+
+*What is status code and how to decide if request is successful:
+    200: OK (Success)
+    201: Created
+    400: Bad Request
+    401: Unauthorized
+    500: Internal Server Error
+
+    if response.status_code == 200:
+    print("Success")
+    else:
+        print("Failed")
+
+*How to read the request response:
+    response.text  # as string
+    response.json()  # as dictionary (for JSON responses)
+
+*How to authenticate request call (username/password):
+    response = requests.get(url, auth=("user", "pass"))
+
+*How to construct payload for POST method:
+    payload = {
+    "name": "john",
+    "age": 30
+    }
+    response = requests.post(url, json=payload)
+
+*What is json.loads() and json.dumps():
+    json.loads(): Convert JSON string to Python dict.
+    json.dumps(): Convert Python dict to JSON string.
+
+*How to handle timeout exception in requests:
+    try:
+        response = requests.get(url, timeout=5)
+    except requests.exceptions.Timeout:
+        print("Request timed out")
+
+*REST API problem example:
+    -> invalid auth/timeout/400 bad requrest due to wroing pyalod 
+

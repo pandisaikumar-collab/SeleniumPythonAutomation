@@ -1,0 +1,20 @@
+"""
+Linux commands: 
+"""
+
+Create file: touch filename.txt 
+
+Read file: cat filename.txt 
+
+Create directory: mkdir mydir 
+
+Remove directory: rmdir mydir 
+
+rmdir -r mydir [if the directory is not emtpy (and you wat to delete everything inside.)]
+
+Differece: Red Hat vs Ubuntu:
+=============================
+* Red Hat: Commercial/RPM-Based/Preferred in enterprise
+* Ubuntu: Debian-based/Free and widely used in Dev environment.
+
+

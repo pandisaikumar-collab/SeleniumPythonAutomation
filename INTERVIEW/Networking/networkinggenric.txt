@@ -1,0 +1,32 @@
+"""
+Networking Concepts
+"""
+Router: Connects different networks 
+Hub: Broadcasts data to all ports 
+Switch: Sends data only to intended device 
+
+VLAN/TRUNK PORT/ACCESS PORT:
+============================
+VLAN: Virtual Lan: isolates broadcast domains 
+Trunk Port: Carries multiple VLAN 
+Access Port: Carries triffic for one VLAN 
+
+Dynamic Routing Protocols:
+==========================
+OSPF: Link-state protocol --> useds Dijkstra's algorithm 
+RIP: Distance-vector protocol: maxhop count 15 
+
+Spanning Tree Protocol (STP):
+=============================
+Prevent loops in layer 2 networks.
+
+ICMP/HTTP/HTTPS:
+================
+ICMP: used by ping/traceroute 
+HTTP: Unsecured protocol 
+HTTS: Secured HTTP using SSL/TLS 
+
+TCP 3-WAY HANDSHAKE:
+====================
+SYN -> SYN-ACK -> ACK (Establishesh reliable connection)
+

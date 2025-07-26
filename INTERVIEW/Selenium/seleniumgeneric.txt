@@ -1,0 +1,92 @@
+"""
+Selenium General Questions
+"""
+
+* what is selenium:
+    selenium is open-source automation testingtool used to automate 
+    web applications for testing purposes.
+
+* how to install selenium:
+    pip install seleneium 
+
+* how to get xpath:
+    Right-click the elemnet in browser -> inspect - right click highlighted code.
+    Write custom XPATH using attributes 
+
+* how to launch a browser:
+    from selenium import webdriver 
+    from selenium.webdriver.common.by import By 
+    driver = webdriver.Chrome()
+    driver.get("url")
+
+* what is selenium Remote WebDriver:
+    it allows you to run your tests on a remote maching using Selenium Grid.
+
+* Locating Elements & Waits:
+    By.ID
+    By.NAME 
+    By.CLASS_NAME
+    By.TAG_NAME
+    By.CSS_SELECTOR 
+    By.LINK_TEXT 
+
+* how to find al text box and enter value:
+    input_ele = driver.find_element(By.XPATH, 'xpath')
+    input_ele.send_keys('input text')
+
+* how to check if a checkobx is selected or not:
+    checkbox = driver.find_element(By.XPATH, 'xpath')
+    checkbox.is_selected()
+
+* how to use ActionChains:
+    from selenium.webdriver.common.action_chains import ActionChains
+    action = ActionChains(driver)
+    action.move_to_element(element).click().perform()
+
+*How to do double-click:
+action.double_click(element).perform()
+
+*What is Implicit and Explicit wait:
+    Implicit Wait: waits globally for elements
+    driver.implicitly_wait(10)
+
+    Explicit Wait: waits for a specific condition
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    wait = WebDriverWait(driver, 10)
+    element = wait.until(EC.visibility_of_element_located((By.XPATH, "element_xpath")))
+
+ *Click navigation link dynamically:
+    def click_nav_link(link_text):
+        xpath = f"//a[text()='{link_text}']"
+        driver.find_element(By.XPATH, xpath).click()
+
+    click_nav_link("Python Lists")
+
+"""
+Exceptions & Logic Handling
+"""
+* If any XPath is modified, how to update it:
+    Use relative/custom XPath using stable attributes.
+    //input[contains(@id, 'email')]
+
+* How do you handle progress bar:
+    Wait until progress bar element is not visible.
+    wait.until(EC.invisibility_of_element_located((By.XPATH, "xpath")))
+
+* How to handle sudden popups:
+    try:
+        alert = driver.switch_to.alert
+        alert.accept()
+    except:
+        print("No alert present")
+
+* How to create XPath using ancestor/sibling/descendant:
+    //div[@id='content']//descendant::p
+    //label[text()='Email']/following-sibling::input
+    //input[@type='text']/ancestor::form
+
+* Common Selenium errors and fixes
+    NoSuchElementException: Element not found
+    ElementClickInterceptedException: Another element overlays the clickable one
+    Fix: Use JavaScript or wait until visible.
