@@ -1,0 +1,4 @@
+REALPYTHON_GET: "https://jsonplaceholder.typicode.com/todos/"
+REALPYTHON_POST: "https://jsonplaceholder.typicode.com/todos"
+REALPYTHON_PUT: "https://jsonplaceholder.typicode.com/todos/10"
+REALPYTHON_DELETE: "https://jsonplaceholder.typicode.com/todos/10"
