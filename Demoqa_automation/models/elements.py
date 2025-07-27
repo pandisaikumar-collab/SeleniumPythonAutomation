@@ -112,6 +112,12 @@ class Elements:
         """
         return self.click_button(xpath=self.xpaths["elements_wrapper"]["xpath"])
     
+    def click_buttons_sections(self):
+        """
+        Clicks on the Button sections
+        """
+        return self.click_button(xpath=self.xpaths["elements_groups"]["buttons_section"]["xpath"])
+    
     def click_text_box_button(self):
         """
         Clicks on the Text Box button
@@ -355,6 +361,92 @@ class Buttons(object):
         self.locators = current_dir + "/../locators/elements.yaml"
         with open(self.locators, 'r') as file:
             self.xpaths = yaml.safe_load(file)
+
+    def is_buttons_page_loaded(self):
+        """
+        Returns True if elements page loaded 
+        False otherwise
+        :returns: bool
+        """
+        page = 'Buttons page'
+        timeout = DEFAULT_WAITIME
+        is_buttons_page_loaded = True
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.visibility_of_all_elements_located((
+                    By.XPATH, self.xpaths["buttons_section"]["all_buttons"]["xpath"])))
+        
+        except (NoSuchElementException, TimeoutException) as e:
+            is_buttons_page_loaded = False
+            log.error(f"{page} not loaded: {e}")
+
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.element_to_be_clickable((
+                    By.XPATH, self.xpaths["buttons_section"]["all_buttons"]["xpath"])))
+        
+        except (NoSuchElementException, TimeoutException) as e:
+            is_buttons_page_loaded = False
+            log.error(f"{page} not loaded: {e}")
+        
+        return is_buttons_page_loaded
+    
+    def double_click(self):
+        """
+        Returns:bool: True if double-click was successful, False otherwise.
+        """
+        timeout = DEFAULT_WAITIME
+        try:
+            double_ele = WebDriverWait(self.driver, timeout).until(
+                EC.element_to_be_clickable(
+                    (By.XPATH, self.xpaths['buttons_section']['double_click_button']["xpath"])
+                )
+            )
+            ActionChains(self.driver).move_to_element(double_ele).double_click().perform()
+            return True
+        except Exception as e:
+            log.error(f"Double click action failed: {e}")
+            return False
+
+        try:
+            double_msg = self.driver.find_element(By.XPATH, self.xpaths["buttons_section"]["double_click_msg"]["xpath"])
+            time.sleep(0.5)
+            msg_txt = double_ele.text 
+            log.info("Double click message: ", msg_txt)
+        
+        except Exception as e:
+            log.error("Double click text msg not getting.")
+
+    
+    def right_click(self):
+        """
+        Function to Right click
+        """
+        timeout = DEFAULT_WAITIME
+        try:
+            right_ele = WebDriverWait(self.driver, timeout).until(
+                EC.element_to_be_clickable((By.XPATH, self.xpaths["buttons_section"]["right_click_button"]["xpath"]))
+            )
+            ActionChains(self.driver).move_to_element(right_ele).context_click().perform()
+            return True 
+        except Exception as e:
+            log.error(f"Failed to right click: {e}")
+            return False 
+        
+    def click_me(self):
+        """
+        Function to Click
+        """
+        timeout = DEFAULT_WAITIME
+        try:
+            click_me = WebDriverWait(self.driver, timeout).until(
+                EC.element_to_be_clickable((By.XPATH, self.xpaths["buttons_section"]["click_me_button"]["xpath"]))
+            )
+            ActionChains(self.driver).move_to_element(click_me).click().perform()
+            return True 
+        except Exception as e:
+            log.error(f"Failed to click: {e}")
+            return False 
     
     
         

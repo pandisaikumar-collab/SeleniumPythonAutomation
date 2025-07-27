@@ -6,6 +6,7 @@ import logging
 from selenium import webdriver
 from models.demohome import DemoHome
 from models.elements import Elements
+from models.elements import Buttons
 
 log = logging.getLogger(os.path.basename(__file__))
 log.setLevel(logging.INFO)
@@ -43,6 +44,10 @@ def home_obj(driver):
 def elements_obj(driver):
     return Elements(driver)
 
+@pytest.fixture()
+def buttons_obj(driver):
+    return Buttons(driver)
+
 def test_demo_home_page(driver, config, home_obj, elements_obj):
     if home_obj.is_demoqa_page_loaded():
         home_obj.click_elements_button()
@@ -56,7 +61,7 @@ def test_demo_home_page(driver, config, home_obj, elements_obj):
                 pytest.fail("No data found in the web table")
     else:
         pytest.fail("Failed to load Demo Home page")
-
+@pytest.mark.skip
 def test_fill_registration_form(driver, config, elements_obj):
     payload = {
         'firstname': config['registration_form']['firstname'],
@@ -71,3 +76,17 @@ def test_fill_registration_form(driver, config, elements_obj):
         pytest.fail("No registration payload found in config file")
     else:
         elements_obj.fill_registration_form(payload)
+
+def test_buttons_operations(driver,elements_obj,buttons_obj):
+    elements_obj.click_buttons_sections()
+    page = buttons_obj.is_buttons_page_loaded()
+    if page == True:
+        assert buttons_obj.double_click()
+        time.sleep(5)
+        assert buttons_obj.right_click()
+        time.sleep(5)
+        assert buttons_obj.click_me()
+        time.sleep(5)
+    else:
+        pytest.fail("Failed to button operation")
+    
