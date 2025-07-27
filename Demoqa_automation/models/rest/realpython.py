@@ -43,8 +43,6 @@ class RealPython:
             log.error(
                 "RESPONSE TIMEOUT EXCEPTION. Response exceeds {} sec".format(timeout))
             return None
-
-        # self.__log_response_time("GET", url, response)
         return response
 
     def put(self, url, payload=None, headers=None, **kwargs):
@@ -87,7 +85,6 @@ class RealPython:
                 "RESPONSE TIMEOUT EXCEPTION. Response exceeds {} sec".format(timeout))
             return None
 
-        #self.__log_response_time("PUT", url, response)
         return response
 
     def post(self, url, payload=None, headers=None, **kwargs):
@@ -130,7 +127,6 @@ class RealPython:
                 "RESPONSE TIMEOUT EXCEPTION. Response exceeds {} sec".format(timeout))
             return None
 
-        #self.__log_response_time("POST", url, response)
         return response
 
     def delete(self, url, headers=None, **kwargs):
@@ -163,24 +159,5 @@ class RealPython:
             log.error(
                 "RESPONSE TIMEOUT EXCEPTION. Response exceeds {} sec".format(timeout))
             return None
-
-        # self.__log_response_time("DELETE", url, response)
         return response
 
-    # def __log_response_time(self, method, url, response):
-    #     """
-    #     Log the response time for requests
-
-    #     :param method: HTTP method used
-    #     :type method: str
-    #     :param url: URL of the request
-    #     :type url: str
-    #     :param response: Response object
-    #     :type response: requests.models.Response
-    #     """
-    #     log.info("Time elapsed for this {} to complete: {0:.2f} seconds"
-    #              .format(method, response.elapsed.total_seconds()))
-    #     if self.CAPTURE_RESPONSE_TIME:
-    #         if not f"{method}_{url}" in self.RESPONSE_TIMES:
-    #             self.RESPONSE_TIMES.update(
-    #                 {f"{method}_{url}": "{0:.2f} sec".format(response.elapsed.total_seconds())})
