@@ -19,3 +19,4 @@ python_obj = {"name": "b", "city": "hyd", "age": 25, "designation": "Software"}
 data = json.dumps(python_obj)
 print(data)
 print(type(data))
+

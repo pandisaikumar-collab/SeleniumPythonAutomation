@@ -61,3 +61,26 @@ REST API with Python
 *REST API problem example:
     -> invalid auth/timeout/400 bad requrest due to wroing pyalod 
 
+
+#Important status_code and Means:
+=================================
+201 -- created resource was successful 
+204 -- No content: request was successful but there is no body to return 
+301/302 -- Moved(Redirect to other url)
+400 -- bad request (client side issue, like missing pyaload/invali parameters)
+401 -- Unauthorized (authentication need/missing/invalid token/credentials)
+403 -- Forbidden (you have authonicated but there is not permission to access)
+404 -- wrong (url/endpoint)
+500 -- Internal server (encountered an unexpected condtion/backend code thrown exception/database failure or timeout/)
+
+502:
+The server acting as a gateway or proxy received an invalid response from an upstream server.
+
+Why it happens:
+You're calling a load balancer, reverse proxy (e.g., Nginx), or API Gateway that tried to call a backend server, but the backend crashed or didn’t respond properly.
+Backend service is down, restarting, or not reachable.
+A microservice returns a corrupt or incomplete response to the proxy.
+
+Real-world example:
+Nginx tries to proxy a request to a Node.js server that is not running.
+Your frontend hits api.mycompany.com (which is a gateway), but the backend app behind it is offline or crashed.
