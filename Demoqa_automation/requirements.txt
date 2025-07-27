@@ -4,6 +4,7 @@ pytest
 pyyaml
 paramiko
 selenium
+requests
 pytest
 pyyaml
 pytest-html
