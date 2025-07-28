@@ -1,0 +1,55 @@
+"""
+Config steps for Jenkins to run from 
+GitHub Repository
+"""
+Steps:
+======
+1) Go to the official Java JDK download page
+    https://jdk.java.net/21/
+    https://jdk.java.net/java-se-ri/21
+    Windows 11 x64 Java Development Kit (sha256) 188 MB
+
+2) Extract zip file:
+    openjdk-21+35_windows-x64_bin
+
+3) Set Environment Variables:
+    Go to - Environment Variables 
+        (JAVA_HOME → C:\Java\jdk-21.0.8)
+        (Add to PATH: C:\Java\jdk-21.0.8\bin)
+    
+    Open a new Command Prompt:
+        java -version
+        javac -version
+
+    You should get an output like:
+    java version "21.0.8"
+    Java(TM) SE Runtime Environment ...
+    Java HotSpot(TM) 64-Bit Server VM ...
+
+4) Install Jenkins on Windows (After Java Setup)/Download Jenkins MSI Installer:
+   https://www.jenkins.io/download/
+   Choose Windows → MSI installer.
+   Download Jenkins 2.516.1 LTS for:  (Windows)
+
+5) Double click on jenkins:
+    Follow the installation wizard:
+    Service Account: Keep the default.
+    Java Path: If it asks, provide the full path to java.exe, like:
+    C:\jdk-21.0.8\bin\java.exe
+
+6) Complete Installation
+    After installation:
+    Jenkins runs as a Windows service.
+    It opens your browser and launches:
+    http://localhost:8080
+
+7) Get the Initial Admin Password:
+    C:\Program Files\Jenkins\secrets\initialAdminPassword
+
+8). Customize Jenkins Setup
+    Install Suggested Plugins (recommended).
+    Create your first admin user.
+    Jenkins dashboard will appear.
+
+9) To find password:
+    dir initialAdminPassword /s /b C:\
