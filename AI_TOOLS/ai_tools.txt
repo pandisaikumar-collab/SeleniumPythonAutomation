@@ -1,0 +1,26 @@
+"""
+How AI tools (chatgpt/ms copilet/VScode copilet)
+Help in Automation/Manual taks 
+"""
+
+1) untilitysed to identify and fix syntax error quickly while working on with selenium based UI test scripts.
+2) got help from Copilet to auto-complete repetitive locator handling logics in Locator yaml/Lib files  
+3) asked chatgpt to simplify complex logic used in network device onboarding and CLI validation workflows.
+4) used Copilet to auto-generate resusable untility functions
+5) leveraged AI to convert log python if-else condtions into cleaner dictionary-based logic for eaier maintenance. 
+6) used to clarify exceptions and traceback errors, saving time during debugging of flaky tests. 
+7) creating YAML test structure examples 
+8) leveraged ai tools quickly understand existing logics. 
+
+
+
+flaky test: 
+===========
+1) sometimes testcase passes and sometimes fails without any changes to the code 
+   ,evironment, or test inputs, these test are unreliable because their outcome is incosisitent.
+
+    Timing issue (test tries to click an element before it's visible or loaded)
+    Unstable Network (test depends on a backend service that responds slowly or inconsistently)
+    Improper Wait conditions in automation (using time.sleep(2) instead of proper WebDriverWait)
+    Dynamic content (element xpaths or data that change on every run.)
+    
