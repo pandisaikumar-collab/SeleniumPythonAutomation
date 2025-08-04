@@ -116,7 +116,8 @@ STLC:
     ii) the test fails because the cart dosen't update the total 
     iii) you log this bug: cart total not updating when new item is added. 
 
-5) Defect tracking: (Find and Fix bugs)
+5) Defect tracking: (Find and Fix bugs):
+----------------------------------------
     1) Report the bugs to developers: share the issues with the dev team 
        through bug tracking tools (like jira/bugzilla)
     
@@ -133,6 +134,7 @@ STLC:
     iii) you mark the bug as resolved or closed. 
 
 6) Test Reporting(Reporting and Analysis):
+------------------------------------------
     1) Prepare a test summary report: summarize how many testcases passed/failed 
        and were skipped.
     
