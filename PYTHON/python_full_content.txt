@@ -1,0 +1,320 @@
+"""
+Durga Meterial Link:
+https://www.durgasoft.com/Python-DURGA-Online.asp
+"""
+PYTHON
+
+1. LANGUAGE FUNDAMENTALS
+
+Introduction
+Features of Python
+Limitations of Python
+Flavors of Python
+Python Versions
+Identifiers
+Reserved Words
+DATA TYPES
+Base Conversions
+Slicing of Strings
+TYPE CASTING
+Fundamental Data Types vs Immutability
+Escape Characters
+Constants
+2. OPERATORS
+
+Arithmetic Operators
+Relational Operators OR Comparison Operators
+Equality Operators
+Logical Operators
+Bitwise Oeprators
+Shift Operators
+Assignment operators
+Ternary Operator OR Conditional Operator
+Special operators
+Operator Precedence
+Mathematical Functions (math Module)
+Command Line Arguments
+Output Statements
+3. FLOW CONTROL
+
+Conditional Statements
+Iterative Statements
+Transfer Statements
+Loops with else Block
+del Statement
+Difference between del and None
+4. STRING DATA TYPE
+
+What is String?
+How to define multi-line String Literals?
+How to Access Characters of a String?
+Behaviour of Slice Operator
+Slice Operator Case Study
+Mathematical Operators for String
+len() in-built Function
+Checking Membership
+Comparison of Strings
+Removing Spaces from the String
+Finding Substrings
+Counting substring in the given String
+Replacing a String with another String
+Splitting of Strings
+Joining of Strings
+Changing Case of a String
+Checking Starting and Ending Part of the String
+To Check Type of Characters Present in a String
+Formatting the Strings
+Important Programs regarding String Concept
+Formatting the Strings
+5. LIST DATA STRUCTURE
+
+Creation of List Objects
+Accessing Elements of List
+List vs Mutability
+Traversing the Elements of List
+Important Functions of List
+Using Mathematical Operators for List Objects
+Comparing List Objects
+Membership Operators
+clear() Function
+Nested Lists
+Nested List as Matrix
+List Comprehensions
+6. TUPLE DATA STRUCTURE
+
+Tuple Creation
+Accessing Elements of Tuple
+Tuple vs Immutability
+Mathematical Operators for Tuple
+Important Functions of Tuple
+Tuple Packing and Unpacking
+Tuple Comprehension
+Differences between List and Tuple
+7. SET DATA STRUCTURE
+
+Creation of Set Objects
+Important Functions of Set
+Mathematical Operations on the Set
+Membership Operators: (in, not in)
+Set Comprehension
+8. DICTIONARY DATA STRUCTURE
+
+How to Create Dictionary?
+How to Access Data from the Dictionary?
+How to Update Dictionaries?
+How to Delete Elements from Dictionary?
+Important Functions of Dictionary
+Dictionary Comprehension
+9. FUNCTIONS
+
+Built in Functions
+User Defined Functions
+Parameters
+Return Statement
+Returning Multiple Values from a Function
+Types of Arguments
+Case Study
+Types of Variables
+global Keyword
+Recursive Functions
+Anonymous Functions
+Normal Function
+Lambda Function
+filter() Function
+ap() Function
+reduce() Function
+Everything is an Object
+Function Aliasing
+Nested Functions
+10. MODULES
+
+Renaming a Module at the time of import (Module Aliasing)
+from ... import
+Various Possibilties of import
+Member Aliasing
+Reloading a Module
+Finding Members of Module by using dir() Function
+The Special Variable __name__
+Working with math Module
+Working with random Module
+11. PACKAGES
+
+12. 100 PATTERN PROGRAMS
+
+13. OOP’s Part – 1
+
+What is Class?
+How to define a Class?
+What is Object?
+What is Reference Variable?
+Self Variable
+Constructor Concept
+Differences between Methods and Constructors
+Types of Variables
+Where we can declare Instance Variables
+How to Access Instance Variables
+How to delete Instance Variable from the Object
+Static Variables
+Instance Variable vs Static Variable
+Various Places to declare Static Variables
+How to access Static Variables
+Where we can modify the Value of Static Variable
+How to Delete Static Variables of a Class
+Local Variables
+Types of Methods
+Setter and Getter Methods
+Passing Members of One Class to Another Class
+Inner Classes
+Garbage Collection
+How to enable and disable Garbage Collector in our Program
+Destructors
+How to find the Number of References of an Object
+14. OOP’s Part – 2
+
+Inheritance
+IS-A vs HAS-A Relationship
+Composition vs Aggregation
+Types of Inheritance
+Method Resolution Order (MRO)
+Head Element vs Tail Terminology
+How to find Merge?
+Finding mro(P) by using C3 Algorithm
+super() Method
+How to Call Method of a Particular Super Class?
+Various Important Points about super()
+15. OOP’s Part – 3
+
+Polymorphism
+Duck Typing Philosophy of Python
+Overloading
+Overriding
+16. OOP’s Part – 4
+
+Abstract Method
+Abstract class
+Interface
+Concreate Class vs Abstract Class vs Inteface
+Public,Private and Protected Members
+__str__() Method
+Difference between str() and repr() Functions
+Small Banking Application
+17. Exception Handling
+
+Syntax Errors
+Runtime Errors
+What is Exception
+Default Exception Handing in Python
+Python's Exception Hierarchy
+Customized Exception Handling by using try-except
+Control Flow in try-except
+How to Print Exception Information
+try with Multiple except Blocks
+Single except Block that can handle Multiple Exceptions
+Default except Block
+finally Block
+Control Flow in try-except-finally
+Nested try-except-finally Blocks
+Control Flow in nested try-except-finally
+else Block with try-except-finally
+Various possible Combinations of try-except-else-finally
+Types of Exceptions
+How to Define and Raise Customized Exceptions
+18. File Handling
+
+Types of Files
+Opening a File
+Closing a File
+Various Properties of File Object
+Writing Data to Text Files
+Reading Character Data from Text Files
+The with Statement
+The seek() and tell() Methods
+How to check a particular File exists OR not
+Handling Binary Data
+Handling CSV Files
+Writing Data to CSV File
+Reading Data from CSV File
+Zipping and Unzipping Files
+To Create Zip File
+Working with Directories
+Running Other Programs from Python Program
+How to get Information about a File
+Pickling and Unpickling of Objects
+19. Multi Threading
+
+Multi Tasking
+The ways of Creating Thread in Python
+Setting and Getting Name of a Thread
+Thread Identification Number (ident)
+enumerate() Function
+isAlive() Method
+join() Method
+Daemon Threads
+Default Nature
+Synchronization
+Synchronization By using Lock Concept
+Problem with Simple Lock
+Demo Program for Synchronization by using RLock
+Difference between Lock and RLock
+Synchronization by using Semaphore
+Bounded Semaphore
+Difference between Lock and Semaphore
+Inter Thread Communication
+Inter Thread Communication by using Event Objects
+Methods of Event Class
+Inter Thread Communication by using Condition Object
+Methods of Condition
+Case Study
+Inter Tread Communication by using Queue
+Important Methods of Queue
+Types of Queues
+Good Programming Practices with usage of Locks
+20. Python Database Programming
+
+Storage Areas
+File Systems
+Databases
+Python Database Programming
+Working with Oracle Database
+Installing cx_Oracle
+How to Test Installation
+Working with MySQL Database
+Commonly used Commands in MySQL
+Driver/Connector Information
+How to Check Installation
+21. Regular Expressions & Web Scraping
+
+Character Classes
+Pre defined Character Classes
+Qunatifiers
+Important Functions of Remodule
+Web Scraping by using Regular Expressions
+22. Decorator Functions
+
+Decorator Chaining
+23. Generator Functions
+
+Advantages of Generator Functions
+Generators vs Normal Collections wrt Performance
+Generators vs Normal Collections wrt Memory Utilization
+24. Assertions
+
+Debugging Python Program by using assert Keyword
+Types of assert Statements
+Exception Handling vs Assertions
+25. Python Logging
+
+Logging Levels
+How to implement Logging
+How to configure Log File in over writing Mode
+How to Format Log Messages
+How to add Timestamp in the Log Messages
+How to Change Date and Time Format
+How to write Python Program Exceptions to the Log File
+Problems with Root Logger
+Need of Our Own Customized Logger
+Advanced logging Module Features: Logger
+Logger with Configuration File
+Creation of Custom Logger
+How to Create seperate Log File based on Caller
+Advantages of Customized Logger
