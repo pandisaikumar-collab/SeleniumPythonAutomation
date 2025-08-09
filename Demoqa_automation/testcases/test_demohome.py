@@ -61,7 +61,8 @@ def test_demo_home_page(driver, config, home_obj, elements_obj):
                 pytest.fail("No data found in the web table")
     else:
         pytest.fail("Failed to load Demo Home page")
-@pytest.mark.skip
+
+# @pytest.mark.skip
 def test_fill_registration_form(driver, config, elements_obj):
     payload = {
         'firstname': config['registration_form']['firstname'],
@@ -76,6 +77,8 @@ def test_fill_registration_form(driver, config, elements_obj):
         pytest.fail("No registration payload found in config file")
     else:
         elements_obj.fill_registration_form(payload)
+        #elements_obj.click_submit_button()
+        time.sleep(10)
 
 def test_buttons_operations(driver,elements_obj,buttons_obj):
     elements_obj.click_buttons_sections()

@@ -1,0 +1,8 @@
+widgets: 
+  xpath: "//div[@class='header-wrapper']//following::*[text()='Widgets']"
+progress_bar_section:
+  xpath: "//div[@class='header-wrapper']//following::*[text()='Widgets']//following::span[text()='Progress Bar']"
+progress_bar:
+  xpath: "//div[contains(text(), 'Progress Bar')]//..//div[@id='progressBar']"
+start_button:
+  xpath: "//h1[text()='Progress Bar']//following::button[text()='Start']"

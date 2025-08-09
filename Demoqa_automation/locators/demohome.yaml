@@ -4,3 +4,5 @@ demo_all_elements:
   xpath: "//div[contains(@class, 'home-body')]//div[contains(@class, 'cards')]//div[contains(@class, 'card-body')]/h5"
 elements_icon:
   xpath: "//div[@class='card-body']//h5[contains(text(), 'Elements')]"
+widgets: 
+  xpath: "//div[@class='header-wrapper']//following::*[text()='Widgets']"

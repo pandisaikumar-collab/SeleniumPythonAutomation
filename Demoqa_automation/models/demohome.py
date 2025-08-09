@@ -93,7 +93,12 @@ class DemoHome:
         Clicks on the Elements button 
         """
         return self.click_button(xpath=self.xpaths["elements_icon"]["xpath"])
-    
+
+    def click_widgets_section(self):
+        """
+        Clicks on the Widgets button 
+        """
+        return self.click_button(xpath=self.xpaths["widgets"]["xpath"])
 
     def select_dropdown_item(self, dropdown_xpath, dropdown_items_xpath, dropdown_item):
         """

@@ -329,7 +329,9 @@ class Elements:
             self.enter_salary(api_payload['salary'])
         if 'department' in api_payload:
             self.enter_department(api_payload['department'])
-        
+
+        self.click_submit_button()
+        time.sleep(0.5)
         return True 
     
     def fill_registration_form(self, api_payload):
