@@ -67,7 +67,4 @@ buttons_section:
     xpath: "//h1[text()='Buttons']//following::p[contains(@id, 'rightClickMessage')]"
   click_me_msg:
     xpath: "//h1[text()='Buttons']//following::p[contains(@id, 'dynamicClickMessage')]"
-
-
-# widgets: 
-#   xpath: "//div[@class='header-wrapper']//following::*[text()='Widgets']"
+    

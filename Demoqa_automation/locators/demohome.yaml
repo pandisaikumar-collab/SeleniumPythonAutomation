@@ -6,7 +6,3 @@ elements_icon:
   xpath: "//div[@class='card-body']//h5[contains(text(), 'Elements')]"
 widgets: 
   xpath: "//div[@class='header-wrapper']//following::*[text()='Widgets']"
-
-
-# widgets: 
-#   xpath: "//div[@class='header-wrapper']//following::*[text()='Widgets']"
