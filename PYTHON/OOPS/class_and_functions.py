@@ -1,5 +1,4 @@
 #class and a function 
-
 class sample:
     x=10
     y=20

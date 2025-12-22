@@ -1,7 +1,7 @@
 #parameterezed constructor 
 #constructor with parameters is called as parameterized constructor 
 
-class test:
+class Test:
     def __init__(self, a, b): #constructor with parameters 
         self.x=a
         self.y=b 
@@ -12,7 +12,7 @@ class test:
         print(r)
         print(s)
 
-t1=test(10,20)
+t1=Test(10,20)
 t1.m1(100,200)
 
 

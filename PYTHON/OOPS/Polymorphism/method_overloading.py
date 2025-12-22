@@ -44,7 +44,3 @@ class Test3:
 
 t3=Test3()
 t3.show(data=10)
-
-
-
-
