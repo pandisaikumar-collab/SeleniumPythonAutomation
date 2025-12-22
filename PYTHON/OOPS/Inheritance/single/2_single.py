@@ -1,5 +1,4 @@
 # Program for single inheritance 
-
 class A:
     x=10
     def m1(self):
@@ -11,8 +10,6 @@ class B(A):
         z=B.x+B.y 
         print("y=", B.y)
         print("z=", z)
-
-
 b1=B()
 b1.m1()
 b1.m2()
