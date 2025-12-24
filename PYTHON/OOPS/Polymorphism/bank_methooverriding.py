@@ -6,8 +6,8 @@ class RBI:
         minbal = 0 
         print('RBI MINBAL: ', minbal)
 
-class HDFC(RBI): #here minbal=1000, i wont RBI minbal here, so i dosent want super class 
-    def minbalance(self): #logic to execute, so i override the method so that sub class
+class HDFC(RBI): #here minimal=1000, I won't RBI minimal here, so i docent want super class
+    def minbalance(self): #logic to execute, so I override the method so that subclass
         minbal=1000       #method logic execute 
         print('HDFC MINBAL', minbal)
 
@@ -19,7 +19,7 @@ class ICICI(RBI):
 
 class SIB(RBI):
     x=10 
-    pass #here it doesn't want tooverride, it will follow RBI rules only
+    pass #here it doesn't want to override, it will follow RBI rules only
          #here it will execute super class method logic only 
 
 h1=HDFC()
