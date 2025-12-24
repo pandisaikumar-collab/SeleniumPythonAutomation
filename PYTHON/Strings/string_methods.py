@@ -8,11 +8,11 @@ print(x.upper())
 x='BGL'
 print(x.lower())
 
-#3. capitalize(): for capitalizing the 1st charecter of a string 
+#3. capitalize(): for capitalizing the 1st character of a string
 x='india'
 print(x.capitalize())
 
-#4. title(): for capitalizing 1st charector of each word in a file
+#4. title(): for capitalizing 1st character of each word in a file
 x='good morning'
 print(x.title())
 
@@ -25,12 +25,12 @@ x='java is easy to learn'
 print(x.replace('java', 'python'))
 
 
-#7. count(): to count the number of occurences of each sub-string or a charecter 
+#7. count(): to count the number of occurrences of each sub-string or a character
 x="hello hello hello.... how are you"
 print(x.count("hello"))
 
 #8. format(): for substitutions 
-x="{} is the captin of IndianTeam"
+x="{} is the captain of IndianTeam"
 print(x.format("Dhoni"))
 
 #9. split(): if we split a string, we get a list 
@@ -39,7 +39,7 @@ y='101,james,8999,manager,pune'
 print(x.split())
 print(y.split(','))
 
-#10. strip(): for removing the blakspaces before and after the string 
+#10. strip(): for removing the backspaces before and after the string
 
 x = " hello good evening "
 #print(x.strip())
@@ -47,9 +47,9 @@ y=x.strip()
 print(y)
 
 #11. find(): to check whether a sub-string is available or not 
-#if found it returns the 1st charecter index postion of the sub-string else it returns -1.
+#if found it returns the 1st character index position of the sub-string else it returns -1.
 
-x='python is eaiser than java'
+x='python is easier than java'
 print(x.find('java'))
 print(x.find('hadoop'))
 

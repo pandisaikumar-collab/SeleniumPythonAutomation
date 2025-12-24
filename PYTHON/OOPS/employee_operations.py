@@ -16,10 +16,10 @@ class employee(object):
     def da(self, daamt): #daily allowance 
         self.empsal = self.empsal + daamt
     
-    def hra(self, hraamt): #hourse rent allowence 
+    def hra(self, hraamt): #hourse rent allowance
         self.empsal = self.empsal + hraamt 
     
-    def ta(self, taamt): #traveling allowence 
+    def ta(self, taamt): #traveling allowance
         self.empsal + self.empsal + taamt 
 
     def tax(self):

@@ -5,15 +5,15 @@ Day-59
 Features of OOPS:
 =================
 1) Encapsulation 
-2) Abstration 
+2) Abstraction
 3) Inheritance 
 4) Polymorphism 
 
 The above OOPS provides 
 Security/Flexibility/Re-usability 
 
-In java, the developer is forced to write programms using oops 
-princeples only, we cannot develop applications with oops in java.
+In java, the developer is forced to write programs using oops
+principles only, we cannot develop applications with oops in java.
 
 But in python, we can write programs using 
 1) procedural-oriented programming 
@@ -24,12 +24,12 @@ Encapsulation: combine data and methods
 Q) why we need to combine data and methods?
 
     1) Every application has got data and operations 
-    2) data represented using vairables 
+    2) data represented using variables
     3) operations represented using functions/methods 
 
     //customer --> data //all are global variables 
     cname = "Miller"
-    caccno = 5012357565
+    cannon = 5012357565
     caddr = "BGL"
     bal = 39999
 
@@ -67,15 +67,15 @@ def hra():
 
 Encapsulation: 
 ==============
-The process of grouping/binding related data (vairables)
+The process of grouping/binding related data (variables)
    along with methods (functionalities) is called as encapsulation 
 
 Encapsulation is implemented by using a class: 
 ==============================================
-Class: A class is structure which groups/binds the related data along with it's methods
+Class: A class is structure which groups/binds the related data along with its methods
 
-1) class is collection of vairables and methods 
-2) data is represented using vairables and 
+1) class is collection of variables and methods
+2) data is represented using variables and
 3) operations are represented using methods 
 
 In class, we can have 2 types of variables, 
@@ -101,7 +101,7 @@ cname ---------
 caddr, 
 caccno, -------> customer group, 
 chal             consisting of data (variable)
-                 such as cname, caddr, caccno, and 
+                 such as cname, caddr, cannon, and
                  methods such as deposit(), transfer() and withdraw()
 
 
@@ -120,13 +120,13 @@ customer group and emp group, we can represent by 2 classes
 class Customer:
     ........
     .........
-    .........  --------> consists of custumer variables + customer methods (functions)
+    .........  --------> consists of customer variables + customer methods (functions)
     .........
 
 class Emp: 
     ........
     ........
-    ........ ---------> consits of emp vaiables + emp methods 
+    ........ ---------> consists of emp variables + emp methods
 
 
 in class customer, customer variables can be accessed by only customer methods 
@@ -134,8 +134,7 @@ similarly, in emp class, emp variable can be access by only emp methods
 
 object: 
 =======
-An object is an instance of a class 
-A class is a collection of similarly objects.
+An object is an instance of a class is a collection of similarly objects.
 we can create 'n' no of objects for a class 
 each object will have its own copy of variables and methods 
 

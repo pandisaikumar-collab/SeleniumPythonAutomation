@@ -15,6 +15,6 @@ class B(A):
 b1 = B()
 b1.m1()
 
-#for overriding and executing userdefined logic only, no need of super, 
+#for overriding and executing predefined logic only, no need of super,
 #but to executed pre-defined logic and user-defined logic, we need super 
 
