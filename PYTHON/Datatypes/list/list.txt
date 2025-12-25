@@ -1,0 +1,42 @@
+> List is a built-in data type
+> Mutable, ordered collection of items
+> Defined using square brackets []
+> Can contain items of different datat types
+> Supports indexing and slicing
+> Common methods:
+    append(),
+    extend(),
+    insert(),
+    remove(),
+    pop(),
+    clear(),
+    index(),
+    count(),
+    sort(),
+    reverse(),
+    copy()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
