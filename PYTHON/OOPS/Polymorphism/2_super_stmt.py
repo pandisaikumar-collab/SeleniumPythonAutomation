@@ -1,4 +1,4 @@
-# Accessing NSV of super class constructor from sub class constructor 
+# Accessing NSV of super class constructor from subclass constructor
 # using super 
 
 class A: 

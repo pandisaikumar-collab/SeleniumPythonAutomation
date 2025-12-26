@@ -1,4 +1,6 @@
 # ex method overriding 
+# inheritance + method overriding
+# type is single inheritance
 
 class RBI: 
     x=10 

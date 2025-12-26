@@ -1,5 +1,5 @@
 
-#sub class method calling super class method 
+#subclass method calling super class method
 
 class A: 
     def m1(self):

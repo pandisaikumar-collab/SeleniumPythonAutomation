@@ -1,9 +1,9 @@
 #super(): This stmt is used  to call super class methods or constructor through 
-#sub class method or constructor 
+#subclass method or constructor
 
 class A: 
     def __init__(self):
-        print('form consturctor A...')
+        print('form constructor A...')
         self.x = 10 
 
 class B(A):
@@ -17,6 +17,6 @@ class B(A):
 
 b1 = B()
 
-#here first super class constructor executes followed by sub class constructor 
-#here both logics are executed userdefined logic(derived class logic) and base class logic 
+#here first super class constructor executes followed by subclass constructor
+#here both logics are executed predefined logic(derived class logic) and base class logic
 
