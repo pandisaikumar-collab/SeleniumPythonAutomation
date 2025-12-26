@@ -14,6 +14,6 @@ print(x[7:14])
 print(x[7: ])
 
 print(x[-7:11])
-print(x[0:15:2]) #(startvalue, stopvalue, stepvalue)
+print(x[0:15:2]) #(start value, stop value, step value)
 print(x[::2])
-print(x[::-1]) #it reverse 
+print(x[::-1]) #it reverses

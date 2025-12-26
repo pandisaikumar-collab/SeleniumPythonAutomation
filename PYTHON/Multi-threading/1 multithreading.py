@@ -1,5 +1,5 @@
 """
-MULTTHREADING:
+MULTITHREADING:
 Day-72
 """
 
@@ -21,4 +21,4 @@ x1.m2()
 
 #here 1st m1() method logic executes an then 
 #m2() method logic is executed, here execution is sequential, if i want parllel then go 
-#for multitheading
+#for multithreading

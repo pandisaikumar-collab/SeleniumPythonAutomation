@@ -31,7 +31,7 @@ Steps:
    Choose Windows → MSI installer.
    Download Jenkins 2.516.1 LTS for:  (Windows)
 
-5) Double click on jenkins:
+5) Double-click on jenkins:
     Follow the installation wizard:
     Service Account: Keep the default.
     Java Path: If it asks, provide the full path to java.exe, like:

@@ -1,14 +1,14 @@
 """
-String: A string is a sequence collection of charecters 
+String: A string is a sequence collection of characters
 in python, a string represented using 
 
-1. single qoute 
-2. double qoute 
-3. triple qoute 
+1. single quote
+2. double quote
+3. triple quote
 
-1) Each charecter of a string is represented or accessed by a unique index 
+1) Each character of a string is represented or accessed by a unique index
     1. Forward index (or) Positive index -----> starts from left to right -----> starts with 0
-    2. Backward index (or) Negative inde -----> starts from right to left -----> starts with -1
+    2. Backward index (or) Negative index -----> starts from right to left -----> starts with -1
 
 """
 

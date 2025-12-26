@@ -1,5 +1,5 @@
 #complex datatypes: for creating complex numbers 
-#complex number is comprised of 2 parts 
+#complex number comprises 2 parts
 
 #1.realpart ------> float type
 #2.imaginary part-> float type 

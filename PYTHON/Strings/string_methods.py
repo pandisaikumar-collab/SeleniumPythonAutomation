@@ -59,11 +59,11 @@ print(x.find('hadoop'))
 print(x.startswith('python'))
 print(y.endswith('java'))
 
-#12. isapha(): to check whether all the charecters within the string are alphabets 
+#12. isapha(): to check whether all the characters within the string are alphabets
 date='agu05'
 print(date.isalpha())
 
-#13. isdecimal(): to check whether all the charecters within the string are numeric 
+#13. isdecimal(): to check whether all the characters within the string are numeric
 
 date='agu05'
 print(date.isdecimal())
@@ -81,7 +81,7 @@ pi='3.4'
 print(len(pi))
 print(pi.isdecimal())
 
-#14. isalnum(): to check whether all the charectors within the string are alphabets or numberic 
+#14. isalnum(): to check whether all the characters within the string are alphabets or numeric
 
 date='agu05'
 print(date.isalnum())
